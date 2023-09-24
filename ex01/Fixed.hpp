@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/23 15:04:10 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/24 14:10:05 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 class Fixed
 {
 	private:
-		int _fractional_bits;
-		static const int fixed_tmp;
+		int _value;
+		static const int _fractional_bits;
 	public:
 		Fixed();
 		Fixed(const Fixed &Fxd);
@@ -34,5 +34,7 @@ class Fixed
 		void setRawBits( int const raw );
 		~Fixed();
 };
+
+std::ostream & operator<<(std::ostream & o, Fixed const & rhs);
 
 #endif
