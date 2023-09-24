@@ -35,6 +35,6 @@ class Fixed
 		~Fixed();
 };
 
-std::ostream & operator<<(std::ostream & o, Fixed const & rhs);
+std::ostream & operator<<(std::ostream & o, Fixed const & FixedPoint);
 
 #endif

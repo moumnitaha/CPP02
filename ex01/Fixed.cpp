@@ -65,11 +65,11 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-    return (this->_value >> _fractional_bits);
+    return (this->_value / (1 << _fractional_bits));
 }
 
-std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
+std::ostream & operator<<(std::ostream & o, Fixed const & FixedPoint)
 {
-    o << rhs.toFloat();
+    o << FixedPoint.toFloat();
     return (o);
 }
