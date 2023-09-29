@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:23 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/25 14:35:15 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/29 16:33:49 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,27 @@ Fixed Fixed::operator++(int)
     return (ref);
 }
 
+Fixed &Fixed::operator--(void)
+{
+    this->setRawBits(this->getRawBits() - 1);
+    return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed ref = *this;
+    this->setRawBits(this->getRawBits() - 1);
+    return (ref);
+}
+
 const Fixed & Fixed::max(Fixed const &a,  Fixed const &b)
 {
     return (a.toFloat() > b.toFloat() ? a : b);
+}
+
+const Fixed & Fixed::min(Fixed const &a,  Fixed const &b)
+{
+    return (a.toFloat() > b.toFloat() ? b : a);
 }
 
 int	Fixed::getRawBits(void) const

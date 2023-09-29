@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/25 14:42:16 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/29 16:33:27 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,11 @@ class Fixed
 
 		Fixed &operator ++ (void);
 		Fixed operator ++ (int);
+		Fixed &operator -- (void);
+		Fixed operator -- (int);
 
 		static const Fixed &max( Fixed const &a,  Fixed const &b);
+		static const Fixed &min( Fixed const &a,  Fixed const &b);
 
 		float toFloat( void ) const;
 		int toInt( void ) const;

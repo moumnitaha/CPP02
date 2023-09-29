@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/25 13:51:56 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/29 16:40:49 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main( void )
 {
     Fixed a;
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    Fixed c (5);
     std::cout << a << std::endl;
     std::cout << ++a << std::endl;
     std::cout << a << std::endl;
@@ -23,5 +24,11 @@ int main( void )
     std::cout << a << std::endl;
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
+    std::cout << Fixed::min( a, b ) << std::endl;
+    std::cout << c << std::endl;
+    std::cout << ++c << std::endl;
+    std::cout << c << std::endl;
+    std::cout << c-- << std::endl;
+    std::cout << c << std::endl;
     return 0;
 }
