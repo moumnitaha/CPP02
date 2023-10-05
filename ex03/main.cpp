@@ -6,30 +6,30 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/24 22:18:39 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/05 18:51:20 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include "Point.hpp"
+
+bool bsp(Point  &a, Point  &b, Point  &c, Point  &point) {
+    return (point.area(a, b) + point.area(b, c) + point.area(c, a)  == a.area(b, c));
+}
 
 int main( void )
 {
-    Fixed a;
-    Fixed const b( 10 );
-    Fixed const c( 42.42f );
-    Fixed const d( b );
-    
-    a = Fixed( 1234.4321f );
-    
-    std::cout << "a is " << a << std::endl;
-    std::cout << "b is " << b << std::endl;
-    std::cout << "c is " << c << std::endl;
-    std::cout << "d is " << d << std::endl;
-    
-    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-    
+    Point  a(20, 0);
+    Point  b(10, 10);
+    Point  c(30, 0);
+    Point  point(15, 4.5f);
+    // std::cout << "Area: " << a.area(b, c) << std::endl;
+    // std::cout << "Area: " << b.area(c, a) << std::endl;
+    // std::cout << "Area: " << c.area(a, b) << std::endl;
+    // std::cout << "P Area: " << point.area(a, b) << std::endl;
+    if (bsp(a, b, c, point))
+        std::cout << std::endl << "Inside" << std::endl << std::endl;
+    else
+        std::cout << std::endl << "Outside" << std::endl << std::endl ;
     return 0;
 }
