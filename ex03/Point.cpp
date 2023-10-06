@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:38 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/05 18:42:27 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/05 22:20:02 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,10 @@ Point & Point::operator=(const Point & copy) {
 	_y = copy._y;
 	std::cout << "Point copy assignment operator called" << std::endl;
 	return (*this);
+}
+
+bool Point::operator==(const Point & copy) {
+	return (this->_x == copy._x && this->_y == copy._y);
 }
 
 Fixed Point::area(Point & b, Point & c) {

@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:35 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/05 18:29:39 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/05 22:20:09 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Point {
 		Point(Fixed x, Fixed y);
 		Point(const Point & copy);
 		Point & operator= (const Point & copy);
+		bool operator== (const Point & copy);
 		Fixed area(Point & b, Point & c);
 		~Point();
 };
