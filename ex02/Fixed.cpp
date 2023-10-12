@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:23 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/29 16:33:49 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 18:45:47 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,17 @@ const Fixed & Fixed::max(Fixed const &a,  Fixed const &b)
     return (a.toFloat() > b.toFloat() ? a : b);
 }
 
+const Fixed & Fixed::max(Fixed &a,  Fixed &b)
+{
+    return (a.toFloat() > b.toFloat() ? a : b);
+}
+
 const Fixed & Fixed::min(Fixed const &a,  Fixed const &b)
+{
+    return (a.toFloat() > b.toFloat() ? b : a);
+}
+
+const Fixed & Fixed::min(Fixed &a,  Fixed &b)
 {
     return (a.toFloat() > b.toFloat() ? b : a);
 }

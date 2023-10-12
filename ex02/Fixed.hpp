@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/29 16:33:27 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 18:41:52 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ class Fixed
 
 		static const Fixed &max( Fixed const &a,  Fixed const &b);
 		static const Fixed &min( Fixed const &a,  Fixed const &b);
+
+		static const Fixed &max( Fixed &a,  Fixed &b);
+		static const Fixed &min( Fixed &a,  Fixed &b);
 
 		float toFloat( void ) const;
 		int toInt( void ) const;
