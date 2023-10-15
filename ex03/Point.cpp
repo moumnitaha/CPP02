@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:38 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/15 18:10:21 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 18:56:43 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Point::Point(const Point & copy) {
 	std::cout << "Point copy constructor called" << std::endl;
 }
 
-Point::Point(float x, float y) : _x(x), _y(y) {
+Point::Point(float const x, float const y) : _x(x), _y(y) {
 	std::cout << "Point parameterized constructor called" << std::endl;
 }
 
@@ -43,4 +43,14 @@ Fixed Point::area(Point & b, Point & c) {
 
 Point::~Point() {
 	std::cout << "Point destructor called" << std::endl;
+}
+
+
+bool bsp( Point const a, Point const b, Point const c, Point const point)
+{
+    if (point == a || point == b || point == c)
+        return (false);
+    if (!point.area(a, b).toFloat() || !point.area(b, c).toFloat() || !point.area(c, a).toFloat())
+        return false;
+    return (point.area(a, b) + point.area(b, c) + point.area(c, a) == a.area(b, c));
 }

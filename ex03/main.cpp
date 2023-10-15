@@ -6,20 +6,12 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/15 16:25:53 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 18:53:09 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include "Point.hpp"
-
-bool bsp(Point  &a, Point  &b, Point  &c, Point  &point) {
-    if (point == a || point == b || point == c)
-        return (false);
-    if (!point.area(a, b).toFloat() || !point.area(b, c).toFloat() || !point.area(c, a).toFloat())
-        return false;
-    return (point.area(a, b) + point.area(b, c) + point.area(c, a) == a.area(b, c));
-}
 
 int main( void )
 {
