@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:38 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/15 15:32:57 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 18:10:21 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Point::Point(const Point & copy) {
 	std::cout << "Point copy constructor called" << std::endl;
 }
 
-Point::Point(Fixed x, Fixed y) : _x(x), _y(y) {
+Point::Point(float x, float y) : _x(x), _y(y) {
 	std::cout << "Point parameterized constructor called" << std::endl;
 }
 
