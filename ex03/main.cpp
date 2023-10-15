@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/15 18:53:09 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 22:42:24 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main( void )
 
     Fixed totoalArea;
 
-    if (a == b || b == c || a == c || !a.area(b, c).toFloat()) {
+    if (a == b || b == c || a == c || !a.area(b, c)) {
         std::cout << "INVALID TRIANGLE" << std::endl;
         return 0;
     }
