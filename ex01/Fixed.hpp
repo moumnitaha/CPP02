@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/24 14:10:05 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 16:38:13 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ class Fixed
 		static const int _fractional_bits;
 	public:
 		Fixed();
-		Fixed(const Fixed &Fxd);
+		Fixed(const Fixed & copy);
 		Fixed(const int a);
 		Fixed(const float f);
-		Fixed & operator = (const Fixed &Fxd);
+		Fixed & operator = (const Fixed & copy);
 		float toFloat( void ) const;
 		int toInt( void ) const;
 		int getRawBits( void ) const;

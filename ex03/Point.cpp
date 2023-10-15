@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:38 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/05 22:20:02 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/15 15:32:57 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ Point::Point(const Point & copy) {
 }
 
 Point::Point(Fixed x, Fixed y) : _x(x), _y(y) {
-	std::cout << "Point parametric constructor called with ("
-	<< this->_x << ", " << this->_y << ")" << std::endl;
+	std::cout << "Point parameterized constructor called" << std::endl;
 }
 
 Point & Point::operator=(const Point & copy) {
