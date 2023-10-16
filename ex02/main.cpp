@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/12 18:48:30 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/16 16:42:27 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main( void )
 {
     Fixed a;
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-    Fixed c (5);
+    // Fixed c (5);
     std::cout << a << std::endl;
     std::cout << ++a << std::endl;
     std::cout << a << std::endl;
