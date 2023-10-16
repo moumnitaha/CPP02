@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:20 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/16 13:21:45 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/16 14:36:38 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int main( void )
     Point const b(5, 2);
     Point const c(-3, 1.75f);
     // Point const point(101, 6);
-    // Point  point(3, 6);
-    Point  point(3.65f, 3.5f);
+    Point  point(1, 10);
+    // Point  point(3.65f, 3.5f);
 
     Fixed totoalArea;
 
-    if (a == b || b == c || a == c || area(a, b, c) == 0)
+    if (a == b || b == c || a == c || !area(a, b, c))
     {
         std::cout << "INVALID TRIANGLE COORDINATES ! " << std::endl;
         return 0;

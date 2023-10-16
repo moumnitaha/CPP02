@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:26 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/16 12:38:38 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/16 14:31:47 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ class Fixed
 		bool  operator <= (const Fixed &Fxd);
 		bool  operator == (const Fixed &Fxd);
 		bool  operator != (const Fixed &Fxd);
+
+		bool operator ! (void);
 
 		Fixed &operator ++ (void);
 		Fixed operator ++ (int);

@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 11:42:23 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/16 12:38:40 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/16 14:32:04 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,11 @@ bool Fixed::operator==(const Fixed &Fxd)
 bool Fixed::operator!=(const Fixed &Fxd)
 {
     return (this->toFloat() != Fxd.toFloat());
+}
+
+bool Fixed::operator!(void)
+{
+    return (this->toFloat() == 0);
 }
 
 Fixed &Fixed::operator++(void)

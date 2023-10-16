@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:01:38 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/16 13:12:29 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/16 14:40:00 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ Point::~Point() {
 	// std::cout << "Point destructor called" << std::endl;
 }
 
-
 Fixed area(const Point & a, const Point & b, const Point & c)
 {
 	return abs((a.getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - a.getY()) + c.getX() * (a.getY() - b.getY())).toFloat()) / 2;
@@ -57,6 +56,8 @@ Fixed area(const Point & a, const Point & b, const Point & c)
 
 bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
+	if (!area(point, a, b) || !area(point, b, c) || !area(point, c, a))
+		return false;
 	Fixed totalArea = area(point, a, b) + area(point, b, c) + area(point, c, a);
-    return (totalArea.toFloat() == area(a, b, c).toFloat());
+    return (totalArea == area(a, b, c));
 }
